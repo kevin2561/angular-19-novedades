@@ -1,0 +1,42 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<section>
+    @if (loading()) {
+    <div>Cargando....</div>
+    } @else {
+    <table>
+        <thead>
+            <tr>
+                <th>iD</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+            @for (item of categorias(); track item.idCategoria) {
+            <tr>
+                <td>{{ item.idCategoria }}</td>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.estado }}</td>
+            </tr>
+            }@empty {
+            <tr>
+                <td>ERRORS</td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
+    }
+</section>
